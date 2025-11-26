@@ -1,0 +1,125 @@
+:root{
+  --bg: #fff6f6;
+  --primary: #d90429;
+  --accent: #0b74ff;
+  --green: #0f9d58;
+  --text: #222;
+  --muted: #777;
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --shadow: 0 10px 40px rgba(0,0,0,0.09);
+}
+
+/* BASIC RESET */
+*{ box-sizing: border-box; margin:0; padding:0; }
+body{
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:22px;
+  color:var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CARD WRAPPER */
+.card{
+  width:100%;
+  max-width:420px;
+  background:#fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding:24px;
+  text-align:center;
+  transition:0.25s ease;
+}
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow:0 16px 50px rgba(0,0,0,0.12);
+}
+
+/* TITLE */
+h1{
+  font-size:24px;
+  margin-bottom:14px;
+  color:var(--primary);
+  letter-spacing:-0.5px;
+  font-weight:800;
+}
+
+/* SECTION BOX */
+.box{
+  margin-bottom:20px;
+  width:100%;
+}
+
+/* INPUTS */
+input{
+  width:100%;
+  padding:12px 14px;
+  margin:8px 0 12px;
+  border-radius: var(--radius-md);
+  border:1px solid #ddd;
+  font-size:15px;
+  transition:0.18s ease;
+}
+input:focus{
+  border-color: var(--accent);
+  box-shadow:0 0 0 3px rgba(11,116,255,0.15);
+  outline:none;
+}
+
+/* BUTTON BASE */
+.btn{
+  width:100%;
+  padding:13px;
+  border:0;
+  border-radius: var(--radius-md);
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  margin-top:10px;
+  transition:0.15s ease;
+}
+
+/* SMALL BUTTONS */
+.btn.small{
+  width:auto;
+  padding:8px 14px;
+  font-size:13px;
+  background:#444;
+  color:#fff;
+  border-radius:8px;
+}
+.top-actions{
+  display:flex;
+  gap:10px;
+  justify-content:space-between;
+  margin-bottom:14px;
+}
+
+/* HELP BUTTON */
+.btn.help{
+  background: linear-gradient(135deg, #ff2e41, #c9071d);
+  color:#fff;
+  font-size:20px;
+  padding:14px;
+  border-radius:14px;
+  letter-spacing:0.5px;
+  box-shadow:0 10px 30px rgba(255,0,0,0.18);
+}
+.btn.help:hover{
+  filter:brightness(1.07);
+  transform:scale(1.02);
+}
+
+/* CANCEL */
+.btn.cancel{
+  background: linear-gradient(135deg, #0f9d58, #0b7e44);
+  color:#fff;
+  padding:12px;
+  border-radius:12px;
+  font-size:16px;
+  box-shadow:0 10px 28px rgba(0,150,7

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SAFE HER - App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card" id="app">
+<div class="top-note-inside">
+  ⚠️ "This is a demo version. In the Pro version, captured photos will be sent directly to the safety-connected person. Some features will be added and some existing features will be modified in the upcoming Pro release."
+</div>
+
+
+  <h1>🚨 SAFE HER</h1>
+
+  <div id="loginBox" class="box">
+    <h3>প্রথমবার রেজিস্টার / লগইন</h3>
+    <input id="nameInput" placeholder="Full name" />
+    <input id="phoneInput" placeholder="Your phone (WhatsApp)" />
+    <input id="contactInput" placeholder="Safety contact(s) (comma separated)" />
+    <input id="pinInput" placeholder="Set 4-digit PIN" maxlength="6" />
+    <button id="saveBtn" class="btn">Save & Continue</button>
+  </div>
+
+  <div id="homeBox" class="box hidden">
+    <div class="top-actions">
+      <button class="btn small" id="contactsBtn">Safety Contacts</button>
+      <button class="btn small" id="placesBtn">Nearby Safe Places</button>
+    </div>
+
+    <button id="helpBtn" class="btn help">HELP ME 🚨</button>
+    <button id="cancelBtn" class="btn cancel">Cancel ✖</button>
+
+    <div id="status">Status: Idle</div>
+
+    <video id="video" autoplay playsinline></video>
+    <img id="preview" class="preview" alt="Captured preview">
+
+    <div class="hint">Allow camera & location. HTTPS required (Netlify).</div>
+  </div>
+</div>
+
+<!-- Hidden Registration Form (Google Form) -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<form id="regForm"
+ action="https://docs.google.com/forms/d/e/1FAIpQLSclrik4XSAOiBi6uhM-MOf5pPoqt7FpuKfm-cfLgR8yzqGnIQ/formResponse"
+ method="POST" target="hidden_iframe" class="hidden">
+
+  <input name="entry.82181442" id="reg_name_field" type="text" />
+  <input name="entry.351317819" id="reg_phone_field" type="text" />
+  <input name="entry.761347363" id="reg_contacts_field" type="text" />
+  <input name="entry.289658881" id="reg_pin_field" type="text" />
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
